@@ -1,0 +1,6 @@
+robotframework
+robotframework-browser
+# robotframework-appiumlibrary
+# robotframework-excellib
+# rpaframework
+# pymssql

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# set current work dir
+cwd=$(pwd)
+
+# Docker command
+docker run --rm -it \
+--name robotrunner \
+--mount type=bind,src="${cwd}/report",target=/report \
+--mount type=bind,src="${cwd}/testcase/",target=/robotfiles \
+robotimg:test1 \
+robot --outputdir ../report  robotfiles/test.robot
+
+Xvfb ":99" -ac -screen "1280x1024x24" -nolisten tcp&
+
+Xvfb :99 -ac -screen 0 1280x1024x24 &
