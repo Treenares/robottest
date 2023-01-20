@@ -31,7 +31,7 @@ jobs:
           uses: actions/download-artifact@v3
           with:
             name: report
-            path: /report
+            path: report
         - name: Get Repository Owner & Name
           run: |
             export OWNER="$(echo "${{ github.repository }}" | awk -F / '{print $1}' | sed -e "s/:refs//")"
