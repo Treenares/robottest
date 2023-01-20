@@ -13,14 +13,14 @@ jobs:
           uses: joonvena/robotframework-docker-action@v0.1
           env:
             BROWSER: chromium
-            ROBOT_TESTS_DIR: robottest/testcases
-            ROBOT_REPORTS_DIR: robottest/reports
+            ROBOT_TESTS_DIR: /testcases
+            ROBOT_REPORTS_DIR: /reports
         - name: Upload test results
           uses: actions/upload-artifact@v1
           if: always()
           with:
             name: reports
-            path: robottest/reports
+            path: reports
 
 #     generate_report:
 #         if: always()
