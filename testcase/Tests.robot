@@ -11,5 +11,6 @@ test
     ${launch_args}=   Set Variable  ['--no-sandbox', '--headless']
     New Persistent Context    url=https://www.google.com/    browser=${browser}  headless=${headless}  args=${launch_args}    viewport=None
     @{LogBrowserCat}    Get Browser Catalog
-    Log To Console    test robot framework test on docker
+    ${test}    Get Text    (//input[@value="ค้นหาด้วย Google"])[2]
+    Log To Console    ${test} test robot framework test on docker
     
