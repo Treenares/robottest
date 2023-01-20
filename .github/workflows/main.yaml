@@ -40,8 +40,8 @@ jobs:
         - name: Send report to commit
           uses: joonvena/robotframework-reporter-action@v2.1
           env:
-            gh_access_token: ${{ secrets.GITHUB_TOKEN }}
+            GH_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
             REPO_OWNER: ${{ env.REPOSITORY_OWNER }}
-            sha: ${{ github.sha }}
+            COMMIT_SHA: ${{ github.sha }}
             REPOSITORY: ${{ env.REPOSITORY_NAME }}
-            report_path: report
+            REPORT_PATH: report
