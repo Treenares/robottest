@@ -38,9 +38,9 @@ jobs:
             echo "REPOSITORY_OWNER" >> $OWNER
             echo "REPOSITORY_NAME" >> $REPO
         - name: Send report to commit
-          uses: joonvena/robotframework-reporter-action@v2
+          uses: joonvena/robotframework-reporter-action@v2.1
           env:
-            gh_access_token: ${{ secrets.TEST_TOKEN }}
+            gh_access_token: ${{ secrets.GITHUB_TOKEN }}
             REPO_OWNER: ${{ env.REPOSITORY_OWNER }}
             sha: ${{ github.sha }}
             REPOSITORY: ${{ env.REPOSITORY_NAME }}
