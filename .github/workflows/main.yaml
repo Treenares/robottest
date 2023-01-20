@@ -15,9 +15,9 @@ jobs:
             browser: chromium
             robot_tests_dir: /testcase
             robot_reports_dir: /report
-        # - name: Upload test results
-        #   uses: actions/upload-artifact@v1
-        #   if: always()
-        #   with:
-        #     name: reports
-        #     path: reports
+        - name: Upload test results
+          uses: actions/upload-artifact@v1
+          if: always()
+          with:
+            name: reports
+            path: reports
