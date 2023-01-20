@@ -42,7 +42,7 @@ jobs:
           uses: joonvena/robotframework-reporter-action@v2.1
           with:
             gh_access_token	: ${{ secrets.GITHUB_TOKEN }}
-            REPO_OWNER: ${{ env.REPOSITORY_OWNER }}
             sha: ${{ github.sha }}
-            REPOSITORY: ${{ env.REPOSITORY_NAME }}
             report_path: report
+            #REPO_OWNER: ${{ env.REPOSITORY_OWNER }}
+            #REPOSITORY: ${{ env.REPOSITORY_NAME }}
